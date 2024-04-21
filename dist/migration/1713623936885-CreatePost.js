@@ -22,8 +22,8 @@ var CreatePost1713623936885 = exports.CreatePost1713623936885 = /*#__PURE__*/fun
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                //升级数据库
-                queryRunner.createTable(new _typeorm.Table({
+                _context.next = 2;
+                return queryRunner.createTable(new _typeorm.Table({
                   name: 'posts',
                   columns: [{
                     name: 'id',
@@ -41,7 +41,9 @@ var CreatePost1713623936885 = exports.CreatePost1713623936885 = /*#__PURE__*/fun
                     type: 'text'
                   }]
                 }));
-              case 1:
+              case 2:
+                return _context.abrupt("return", _context.sent);
+              case 3:
               case "end":
                 return _context.stop();
             }
@@ -61,9 +63,11 @@ var CreatePost1713623936885 = exports.CreatePost1713623936885 = /*#__PURE__*/fun
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                //降级数据库
-                queryRunner.dropTable('posts');
-              case 1:
+                _context2.next = 2;
+                return queryRunner.dropTable('posts');
+              case 2:
+                return _context2.abrupt("return", _context2.sent);
+              case 3:
               case "end":
                 return _context2.stop();
             }
