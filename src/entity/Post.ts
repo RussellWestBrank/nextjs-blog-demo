@@ -4,8 +4,15 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 export class Post {
     @PrimaryGeneratedColumn('increment')
     id: number;
+
     @Column('varchar')
     title: string;
+
     @Column('text')
     content: string;
+
+    constructor(title: string, content: string){
+        this.title = title;
+        this.content = content;
+    }
 }
