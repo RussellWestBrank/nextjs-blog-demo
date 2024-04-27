@@ -1,18 +1,29 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
-
-@Entity()
-export class User {
-
-    @PrimaryGeneratedColumn()
+import {
+    Column,
+    CreateDateColumn,
+    Entity,
+    JoinColumn, OneToMany,
+    OneToOne,
+    PrimaryGeneratedColumn,
+    UpdateDateColumn
+  } from 'typeorm';
+  import {Post} from './Post';
+  import {Comment} from './Comment';
+  
+  @Entity()
+  export class User {
+    @PrimaryGeneratedColumn('increment')
     id: number;
-
-    @Column("text")
-    firstName: string;
-
-    @Column("text")
-    lastName: string;
-
-    @Column("int")
-    age: number;
-
-}
+    @Column('varchar')
+    username: string;
+    @Column('varchar')
+    passwordDigest: string;
+    @CreateDateColumn('time')
+    createdAt: Date;
+    @UpdateDateColumn('time')
+    updateAt: Date;
+    @OneToMany(type => Post, post => post.author)
+    posts: Post[];
+    @OneToMany(type => Comment, comment => comment.user)
+    comments: Comment[]
+  }
