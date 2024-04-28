@@ -5,27 +5,24 @@ var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"))
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 require("reflect-metadata");
 var _typeorm = require("typeorm");
-var _Post = require("./entity/Post");
+var _User = require("./entity/User");
 (0, _typeorm.createConnection)().then( /*#__PURE__*/function () {
   var _ref = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(connection) {
-    var posts;
+    var manager, u1;
     return _regenerator["default"].wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            _context.next = 2;
-            return connection.manager.find(_Post.Post);
-          case 2:
-            posts = _context.sent;
-            if (!(posts.length === 0)) {
-              _context.next = 6;
-              break;
-            }
+            manager = connection.manager;
+            u1 = new _User.User();
+            u1.username = 'Russ';
+            u1.passwordDigest = 'raper';
             _context.next = 6;
-            return connection.manager.save([new _Post.Post('Post 1', 'This is the content of Post 1'), new _Post.Post('Post 2', 'This is the content of Post 2'), new _Post.Post('Post 3', 'This is the content of Post 3'), new _Post.Post('Post 4', 'This is the content of Post 4'), new _Post.Post('Post 5', 'This is the content of Post 5'), new _Post.Post('Post 6', 'This is the content of Post 6'), new _Post.Post('Post 7', 'This is the content of Post 7'), new _Post.Post('Post 8', 'This is the content of Post 8'), new _Post.Post('Post 9', 'This is the content of Post 9'), new _Post.Post('Post 10', 'This is the content of Post 10')]);
+            return manager.save(u1);
           case 6:
+            console.log(u1.id);
             connection.close();
-          case 7:
+          case 8:
           case "end":
             return _context.stop();
         }
