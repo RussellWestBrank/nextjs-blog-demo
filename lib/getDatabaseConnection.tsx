@@ -1,8 +1,18 @@
-import {createConnection} from 'typeorm';
+import {createConnection, getConnectionManager} from 'typeorm';
 
+//闭包，保存这次连接
 const promise = (async function () {
-  console.log('创建connection.')
-  return await createConnection();
+  const manager = getConnectionManager();
+  if (!manager.has('default')) {
+    return createConnection();
+  } else {
+    const current = manager.get('default');
+    if(current.isConnected){
+      return current
+    }else{
+      return createConnection();
+    }
+  }
 })();
 
 
