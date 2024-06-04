@@ -1115,6 +1115,11 @@
   "resolved" "https://registry.npm.taobao.org/@types/marked/download/@types/marked-0.7.4.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fmarked%2Fdownload%2F%40types%2Fmarked-0.7.4.tgz"
   "version" "0.7.4"
 
+"@types/md5@^2.3.5":
+  "integrity" "sha512-/i42wjYNgE6wf0j2bcTX6kuowmdL/6PE4IVitMpm2eYKBUuYCprdcWVK+xEF0gcV6ufMCRhtxmReGfc6hIK7Jw=="
+  "resolved" "https://registry.npmmirror.com/@types/md5/-/md5-2.3.5.tgz"
+  "version" "2.3.5"
+
 "@types/node@^14.0.6":
   "integrity" "sha512-fAtCfv4jJg+ExtXhvCkCqUKZ+4ok/JQk01qDKhL5BDDoS3AxKXhV5/MAVUZyQnSEd2GT92fkgZl0pz0Q0AzcIQ=="
   "resolved" "https://registry.npmmirror.com/@types/node/-/node-14.18.63.tgz"
@@ -1939,6 +1944,11 @@
     "ansi-styles" "^4.1.0"
     "supports-color" "^7.1.0"
 
+"charenc@0.0.2":
+  "integrity" "sha512-yrLQ/yVUFXkzg7EDQsPieE/53+0RlaWTs+wBrvW36cyilJ2SaDWfl4Yj7MtLTXleV9uEKefbAGUPv2/iWSooRA=="
+  "resolved" "https://registry.npmmirror.com/charenc/-/charenc-0.0.2.tgz"
+  "version" "0.0.2"
+
 "chokidar@^3.3.0", "chokidar@^3.4.0", "chokidar@>=2.0.0 <4.0.0":
   "integrity" "sha1-swYRQjzjdjV8dlubj5BLn7o8C+g="
   "resolved" "https://registry.npm.taobao.org/chokidar/download/chokidar-3.4.0.tgz"
@@ -2287,6 +2297,11 @@
   dependencies:
     "node-fetch" "2.6.0"
     "whatwg-fetch" "3.0.0"
+
+"crypt@0.0.2":
+  "integrity" "sha512-mCxBlsHFYh9C+HVpiEacem8FEBnMXgU9gy4zmNC+SXAZNB/1idgp/aulFJ4FgCi7GPEVbfyng092GqL2k2rmow=="
+  "resolved" "https://registry.npmmirror.com/crypt/-/crypt-0.0.2.tgz"
+  "version" "0.0.2"
 
 "crypto-browserify@^3.11.0":
   "integrity" "sha1-OWz58xN/A+S45TLFj2mCVOAPgOw="
@@ -3375,7 +3390,7 @@
   dependencies:
     "binary-extensions" "^2.0.0"
 
-"is-buffer@^1.1.5":
+"is-buffer@^1.1.5", "is-buffer@~1.1.6":
   "integrity" "sha1-76ouqdqg16suoTqXsritUf776L4="
   "resolved" "https://registry.npm.taobao.org/is-buffer/download/is-buffer-1.1.6.tgz"
   "version" "1.1.6"
@@ -3813,6 +3828,15 @@
     "hash-base" "^3.0.0"
     "inherits" "^2.0.1"
     "safe-buffer" "^5.1.2"
+
+"md5@^2.3.0":
+  "integrity" "sha512-T1GITYmFaKuO91vxyoQMFETst+O71VUPEU3ze5GNzDm0OWdP8v1ziTaAEPUr/3kLsY3Sftgz242A1SetQiDL7g=="
+  "resolved" "https://registry.npmmirror.com/md5/-/md5-2.3.0.tgz"
+  "version" "2.3.0"
+  dependencies:
+    "charenc" "0.0.2"
+    "crypt" "0.0.2"
+    "is-buffer" "~1.1.6"
 
 "mdn-data@2.0.4":
   "integrity" "sha1-aZs8OKxvHXKAkaZGULZdOIUC/Vs="
