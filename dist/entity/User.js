@@ -14,10 +14,12 @@ var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/de
 var _applyDecoratedDescriptor2 = _interopRequireDefault(require("@babel/runtime/helpers/applyDecoratedDescriptor"));
 var _initializerWarningHelper2 = _interopRequireDefault(require("@babel/runtime/helpers/initializerWarningHelper"));
 var _typeorm = require("typeorm");
+var _md = _interopRequireDefault(require("md5"));
+var _lodash = _interopRequireDefault(require("lodash"));
 var _Post = require("./Post");
 var _Comment = require("./Comment");
 var _getDatabaseConnection = require("../../lib/getDatabaseConnection");
-var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7;
+var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7;
 var User = exports.User = (_dec = (0, _typeorm.Entity)('users'), _dec2 = (0, _typeorm.PrimaryGeneratedColumn)('increment'), _dec3 = (0, _typeorm.Column)('varchar'), _dec4 = (0, _typeorm.Column)('varchar'), _dec5 = (0, _typeorm.CreateDateColumn)(), _dec6 = (0, _typeorm.UpdateDateColumn)(), _dec7 = (0, _typeorm.OneToMany)(function (type) {
   return _Post.Post;
 }, function (post) {
@@ -26,7 +28,7 @@ var User = exports.User = (_dec = (0, _typeorm.Entity)('users'), _dec2 = (0, _ty
   return _Comment.Comment;
 }, function (comment) {
   return comment.user;
-}), _dec(_class = (_class2 = /*#__PURE__*/function () {
+}), _dec9 = (0, _typeorm.BeforeInsert)(), _dec(_class = (_class2 = /*#__PURE__*/function () {
   function User() {
     (0, _classCallCheck2["default"])(this, User);
     (0, _initializerDefineProperty2["default"])(this, "id", _descriptor, this);
@@ -102,6 +104,16 @@ var User = exports.User = (_dec = (0, _typeorm.Entity)('users'), _dec2 = (0, _ty
         return v.length > 0;
       });
     }
+  }, {
+    key: "generatePasswordDigest",
+    value: function generatePasswordDigest() {
+      this.passwordDigest = (0, _md["default"])(this.password);
+    }
+  }, {
+    key: "toJSON",
+    value: function toJSON() {
+      return _lodash["default"].omit(this, ['password', 'passwordConfirmation', 'passwordDigest', 'errors']);
+    }
   }]);
   return User;
 }(), (_descriptor = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "id", [_dec2], {
@@ -139,4 +151,4 @@ var User = exports.User = (_dec = (0, _typeorm.Entity)('users'), _dec2 = (0, _ty
   enumerable: true,
   writable: true,
   initializer: null
-})), _class2)) || _class);
+}), (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "generatePasswordDigest", [_dec9], Object.getOwnPropertyDescriptor(_class2.prototype, "generatePasswordDigest"), _class2.prototype)), _class2)) || _class);

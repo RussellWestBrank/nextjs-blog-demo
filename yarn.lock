@@ -1110,6 +1110,11 @@
   "resolved" "https://registry.npm.taobao.org/@types/color-name/download/@types/color-name-1.1.1.tgz"
   "version" "1.1.1"
 
+"@types/lodash@^4.17.5":
+  "integrity" "sha512-MBIOHVZqVqgfro1euRDWX7OO0fBVUUMrN6Pwm8LQsz8cWhEpihlvR70ENj3f40j58TNxZaWv2ndSkInykNBBJw=="
+  "resolved" "https://registry.npmmirror.com/@types/lodash/-/lodash-4.17.5.tgz"
+  "version" "4.17.5"
+
 "@types/marked@^0.7.4":
   "integrity" "sha1-YHaFZpuxu94jALxYukNIbLvuHwo="
   "resolved" "https://registry.npm.taobao.org/@types/marked/download/@types/marked-0.7.4.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fmarked%2Fdownload%2F%40types%2Fmarked-0.7.4.tgz"

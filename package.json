@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@babel/cli": "^7.10.1",
+    "@types/lodash": "^4.17.5",
     "@types/md5": "^2.3.5",
     "axios": "^0.19.2",
     "gray-matter": "^4.0.2",
