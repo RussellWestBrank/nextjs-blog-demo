@@ -53,3 +53,13 @@ export const getDatabaseConnection = async () => {
 
 # next.js如何利用session，实现登录态
 结合next-iron-session
+## 会话密码存储
+使用环境变量来存储敏感信息是一个安全和推荐的做法
+### 本地环境
+使用 .env 文件
+dotenv 是一个非常流行的库，用于从 .env 文件中加载环境变量。 .env 文件应位于项目的根目录，并设置在 .gitignore 中以避免敏感信息泄漏到版本控制系统中。
+
+### 在生产环境中设置环境变量
+1. 操作系统环境变量：在 Unix 或 Linux 系统中，可以在启动应用时设置环境变量：
+2. 使用 Docker 容器：在 docker-compose.yml 文件中设置环境变量
+3. 使用云服务
