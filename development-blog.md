@@ -50,3 +50,6 @@ export const getDatabaseConnection = async () => {
 
 
 结论：next框架，代码更新不会去重新加载node_moudules下的代码
+
+# next.js如何利用session，实现登录态
+结合next-iron-session
