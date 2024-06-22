@@ -63,3 +63,14 @@ dotenv 是一个非常流行的库，用于从 .env 文件中加载环境变量�
 1. 操作系统环境变量：在 Unix 或 Linux 系统中，可以在启动应用时设置环境变量：
 2. 使用 Docker 容器：在 docker-compose.yml 文件中设置环境变量
 3. 使用云服务
+
+# 解决Cannot access 'Post' before initialization报错
+
+起因：在写posts接口时报错
+原因：实体间循环依赖
+
+解决：
+在建立关系的时候，不使用函数写法，用字符串类型
+函数写法会导致引入
+
+吐槽：为什么官网推荐的写法会有这问题

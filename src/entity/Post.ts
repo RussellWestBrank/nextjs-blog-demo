@@ -22,8 +22,8 @@ import {
     createdAt: Date;
     @UpdateDateColumn()
     updatedAt: Date;
-    @ManyToOne(type => User, user => user.posts)
-    authorId: User;
-    @OneToMany(type => Comment, comment => comment.post)
+    @ManyToOne('User', 'posts')
+    author: User;
+    @OneToMany('Comment', 'post')
     comments: Comment[];
   }
