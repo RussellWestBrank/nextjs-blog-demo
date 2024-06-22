@@ -23,7 +23,7 @@ import {
     @UpdateDateColumn()
     updatedAt: Date;
     @ManyToOne(type => User, user => user.posts)
-    author: User;
+    authorId: User;
     @OneToMany(type => Comment, comment => comment.post)
     comments: Comment[];
   }

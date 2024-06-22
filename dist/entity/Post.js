@@ -29,7 +29,7 @@ var Post = exports.Post = (_dec = (0, _typeorm.Entity)('posts'), _dec2 = (0, _ty
   (0, _initializerDefineProperty2["default"])(this, "content", _descriptor3, this);
   (0, _initializerDefineProperty2["default"])(this, "createdAt", _descriptor4, this);
   (0, _initializerDefineProperty2["default"])(this, "updatedAt", _descriptor5, this);
-  (0, _initializerDefineProperty2["default"])(this, "author", _descriptor6, this);
+  (0, _initializerDefineProperty2["default"])(this, "authorId", _descriptor6, this);
   (0, _initializerDefineProperty2["default"])(this, "comments", _descriptor7, this);
 }, (_descriptor = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "id", [_dec2], {
   configurable: true,
@@ -56,7 +56,7 @@ var Post = exports.Post = (_dec = (0, _typeorm.Entity)('posts'), _dec2 = (0, _ty
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor6 = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "author", [_dec7], {
+}), _descriptor6 = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "authorId", [_dec7], {
   configurable: true,
   enumerable: true,
   writable: true,
